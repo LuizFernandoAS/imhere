@@ -20,7 +20,9 @@ export default function Home(){
     Alert.alert("Remove", `Remover o participante ${name}?`,[
     {
       text:'Sim',
-      onPress: () => Alert.alert("Deletado!", "O participante foi deletado com sucesso!")
+      onPress: () => 
+        setParticipants(prevState => prevState.filter(
+          participant => participant !== name))
     },
     {
       text: 'Não',
@@ -36,7 +38,7 @@ export default function Home(){
       </Text>
       
       <Text style={styles.eventDate}>
-        Sexta, 4 de Novembro de 2022
+        Terça, 23 de Maio de 2023
       </Text>
 
       <View style={styles.form}>
